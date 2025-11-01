@@ -715,3 +715,91 @@ section {
 .footer-07 .contact-input:focus{
   outline: none;
 }
+
+/* -- SECTION TEAM-06 (com carrossel horizontal automático) -- */
+.team-06 {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding: 10vh 5vw;
+}
+
+.team-06 .slider {
+  overflow: hidden;
+  cursor: grab;
+}
+
+.team-06 .slider:active {
+  cursor: grabbing;
+}
+
+.team-06 .list {
+  display: flex;
+  gap: 30px;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.team-06 .list::-webkit-scrollbar {
+  display: none;
+}
+
+.team-06 .card {
+  flex: 0 0 250px;
+  height: 330px;
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: var(--paragraph-font);
+  font-size: 12px;
+  box-shadow: 0 4px 12px var(--color-black-opacity);
+  transition: transform 0.3s ease;
+}
+
+.team-06 .card:hover {
+  transform: scale(1.05);
+}
+
+.team-06 .light-card {
+  background-image: url(../images/cards/card-background-light.jpg);
+  color: #46694f;
+}
+
+.team-06 .dark-card {
+  background-image: url(../images/cards/card-background-dark.jpg);
+  color: var(--color-white-secundary);
+}
+
+.team-06 .content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.team-06 .content h3 {
+  font-family: var(--title-font);
+  font-size: 20px;
+}
+
+.team-06 .content h5 {
+  font-size: 11px;
+  opacity: 70%;
+}
+
+.team-06 .content p {
+  font-size: 13px;
+}
+
+#team-06 {
+  user-select: none; /* impede selecionar texto */
+  -webkit-user-drag: none; /* impede arrastar imagens em WebKit */
+}
+
+#team-06 img {
+  pointer-events: none; /* impede arrastar imagens */
+}
+
