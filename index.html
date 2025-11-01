@@ -7,6 +7,8 @@
 <link rel="stylesheet" href="assets/css/style.css" />
 <link rel="shortcut icon" type="image/x-icon" href="assets/images/logos/icon-simbia-redondo.svg">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+
 </head>
 
 <body>
@@ -207,51 +209,20 @@
     </section>
 
     <!-- SECTION FUNCIONALIDADES -->
-    <section class="features-04" id="features-04">
-
-        <div class="target-box">
-            <img src="assets/images/targets/target-features-04.svg" alt="">
+    <div id="features-04-items" class="swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="assets/images/features/feature-match.svg" alt=""></div>
+            <div class="swiper-slide"><img src="assets/images/features/feature-catalogo.svg" alt=""></div>
+            <div class="swiper-slide"><img src="assets/images/features/feature-post.svg" alt=""></div>
+            <div class="swiper-slide"><img src="assets/images/features/feature-chat-bot.svg" alt=""></div>
+            <div class="swiper-slide"><img src="assets/images/features/feature-painel.svg" alt=""></div>
+            <div class="swiper-slide"><img src="assets/images/features/feature-guia-legal.svg" alt=""></div>
         </div>
-
-        <div class="page-assignature">
-            <div class="subtitle">
-                <img src="assets/images/logos/icon-simbia-simplista.svg" alt="Logo Borboleta">
-                <h4>Inovação em cada etapa</h4>
-            </div>
-        </div>
-
-        <div id="features-04-content">
-
-            <div id="features-04-box-left">
-                <div class="title-with-logo">
-                    <h2>Transformando com</h2>
-                    <img src="assets/images/logos/icon-simbia-escrito-escuro.svg" alt="Logo Simbia Escrito">
-                    <h2>.</h2>
-                </div>
-
-                <div id="features-04-items" class="features">
-                    <div class="feature"><img src="assets/images/features/feature-match.svg" alt=""></div>
-                    <div class="feature"><img src="assets/images/features/feature-catalogo.svg" alt=""></div>
-                    <div class="feature"><img src="assets/images/features/feature-post.svg" alt=""></div>
-                    <div class="feature"><img src="assets/images/features/feature-chat-bot.svg" alt=""></div>
-                    <div class="feature"><img src="assets/images/features/feature-painel.svg" alt=""></div>
-                    <div class="feature"><img src="assets/images/features/feature-guia-legal.svg" alt=""></div>
-                </div>
-            </div>
-
-            <div id="features-04-words" class="words">
-                <div class="word-list">
-                    <div class="feature-word word-light">Inove</div>
-                    <div class="feature-word word-dark">Transforme</div>
-                    <div class="feature-word word-light">Reutilize</div>
-                    <div class="feature-word word-dark">Lucre</div>
-                    <div class="feature-word word-light">Ganhe</div>
-                </div>
-            </div>
-
-        </div>
-
-    </section>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+    </div>
+    
 
 
         <!-- SECTION PLANOS -->
@@ -768,8 +739,9 @@
     </footer>
 
     <script src="assets/js/script.js"></script>
-    <script>
-        </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+
         
 </body>
 </html>

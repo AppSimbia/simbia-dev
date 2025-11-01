@@ -803,3 +803,98 @@ section {
   pointer-events: none; /* impede arrastar imagens */
 }
 
+/* SECTION FEATURES-04 - Swiper Carousel */
+#features-04-items {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 0;
+  position: relative;
+}
+
+.swiper-slide {
+  background-color: transparent;
+  border-radius: 20px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+/* Estilização das bolinhas de paginação */
+.swiper-pagination {
+  position: relative !important;
+  margin-top: 40px;
+  bottom: 0 !important;
+}
+
+.swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: #21455E;
+  opacity: 0.3;
+  transition: all 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #63B47C;
+  opacity: 1;
+  transform: scale(1.3);
+}
+
+.swiper-pagination-bullet:hover {
+  opacity: 0.6;
+  transform: scale(1.1);
+}
+
+
+.swiper-pagination-bullet-active-main {
+  background-color: #63B47C !important;
+  opacity: 1 !important;
+}
+
+.swiper-pagination-bullet-active-prev,
+.swiper-pagination-bullet-active-next {
+  background-color: #21455E;
+  opacity: 0.5;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  display: none !important;
+}
+
+.swiper-slide:hover {
+  transform: scale(1.02);
+}
+
+@media (max-width: 768px) {
+  #features-04-items {
+    width: 95%;
+    padding: 40px 0;
+  }
+  
+  .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  #features-04-items {
+    padding: 30px 0;
+  }
+  
+  .swiper-pagination {
+    margin-top: 30px;
+  }
+}
+
