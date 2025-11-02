@@ -1277,38 +1277,8 @@ section {
 
 
 
-
-/* RESPONSIVIDADE TABLETS */
-@media (min-width: 481px) and (max-width: 768px) {
-  /* GLOBAL */
-  .btn-standard {
-    height: 2vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  /* -- HEADER -- */
-  /* -- HERO-01 -- */
-  /* -- ABOUT-02 S1 -- */
-  /* -- ABOUT-02 S2 -- */
-  /* -- WORKFLOW-03 -- */
-  /* -- FEATURES-04 -- */
-  .features-04 #features-04-items {
-    width: 95%;
-    padding: 40px 0;
-  }
-  .features-04 .swiper-pagination-bullet {
-    width: 10px;
-    height: 10px;
-  }
-
-
-
-  /* -- PLANS-05 -- */
-  /* -- TEAM-06 -- */
-  /* -- FOOTER-07 -- */
-}
-@media (max-width: 790px){
+@media (max-width: 768px){
+    @media (max-width: 790px){
   .header-nav {
     display: none;
     background-color: var(--color-green-opacity);
@@ -1357,4 +1327,36 @@ section {
   #check:checked ~ .header-nav {
     display: flex; 
   }
+}
+}
+
+/* RESPONSIVIDADE TABLETS */
+@media (min-width: 481px) and (max-width: 768px) {
+  /* GLOBAL */
+  .btn-standard {
+    height: 2vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  /* -- HEADER -- */
+  /* -- HERO-01 -- */
+  /* -- ABOUT-02 S1 -- */
+  /* -- ABOUT-02 S2 -- */
+  /* -- WORKFLOW-03 -- */
+  /* -- FEATURES-04 -- */
+  .features-04 #features-04-items {
+    width: 95%;
+    padding: 40px 0;
+  }
+  .features-04 .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+  }
+
+
+
+  /* -- PLANS-05 -- */
+  /* -- TEAM-06 -- */
+  /* -- FOOTER-07 -- */
 }
