@@ -76,29 +76,27 @@ let btnStepOne = document.querySelector("#step-one .btn-flow");
 let btnStepTwo = document.querySelector("#step-two .btn-flow");
 let btnStepThree = document.querySelector("#step-three .btn-flow");
 
-function resetShadows() {
-  btnStepOne.style.boxShadow = "none";
-  btnStepTwo.style.boxShadow = "none";
-  btnStepThree.style.boxShadow = "none";
+function reset() {
+  btnStepOne.style.backgroundColor = "var(--color-green-opacity)";
+  btnStepTwo.style.backgroundColor = "var(--color-green-opacity)";
+  btnStepThree.style.backgroundColor = "var(--color-green-opacity)";
 }
 
 function changeMockupOne() {
   imgMockup.src = "assets/images/mockups/mockup-login.svg";
-  resetShadows();
-  btnStepOne.style.boxShadow = "0 0 30px rgba(255, 255, 255, 0.6)";
-  b;
+  reset();
+  btnStepOne.style.backgroundColor = "var(--color-blue-primary)"
 }
-
 function changeMockupTwo() {
   imgMockup.src = "assets/images/mockups/mockup-home.svg";
-  resetShadows();
-  btnStepTwo.style.boxShadow = "0 0 30px rgba(255, 255, 255, 0.6)";
+  reset();
+  btnStepTwo.style.backgroundColor = "var(--color-blue-primary)"
 }
 
 function changeMockupThree() {
   imgMockup.src = "assets/images/mockups/mockup-match.svg";
-  resetShadows();
-  btnStepThree.style.boxShadow = "0 0 30px rgba(255, 255, 255, 0.6)";
+  reset();
+  btnStepThree.style.backgroundColor = "var(--color-blue-primary)"
 }
 
 btnStepOne.addEventListener('click', changeMockupOne);
