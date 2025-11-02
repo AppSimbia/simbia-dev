@@ -1276,9 +1276,15 @@ section {
 }
 
 
-
+/* RESPONSIVIDADE CELULAR */
 @media (max-width: 768px){
-    @media (max-width: 790px){
+  /* GLOBAL */
+  .btn-standard {
+    height: 2vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   .header-nav {
     display: none;
     background-color: var(--color-green-opacity);
@@ -1286,6 +1292,7 @@ section {
 
   .menu{
     display: block;
+    text-align: center;
   }
   
   #header-list{
@@ -1310,6 +1317,7 @@ section {
       display: block;
       cursor: pointer;
       color: var(--color-green-primary);
+      font-size: 30px;
   }
   
   #check:checked ~ .open-menu {
@@ -1327,8 +1335,16 @@ section {
   #check:checked ~ .header-nav {
     display: flex; 
   }
+  #header-menu-title {
+    width: 110px;
+  }
+  .menu .header-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
-}
+
 
 /* RESPONSIVIDADE TABLETS */
 @media (min-width: 481px) and (max-width: 768px) {
