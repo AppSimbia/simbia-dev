@@ -1308,7 +1308,53 @@ section {
   /* -- TEAM-06 -- */
   /* -- FOOTER-07 -- */
 }
-@media (max-width: 700px){
+@media (max-width: 790px){
+  .header-nav {
+    display: none;
+    background-color: var(--color-green-opacity);
+  }
 
+  .menu{
+    display: block;
+  }
+  
+  #header-list{
+    display: block;
+  }
 
+  #check {
+    display: none;
+  }
+
+  .close-menu{
+    display: none;
+    cursor: pointer;
+    color: var(--color-white-opacity);
+  }
+
+  #header-logo{
+    display: none;
+  }
+
+  .open-menu {
+      display: block;
+      cursor: pointer;
+      color: var(--color-green-primary);
+  }
+  
+  #check:checked ~ .open-menu {
+    display: none; 
+  }
+
+  #check:checked ~ .header-nav .close-menu {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 1.5rem; 
+}
+
+  #check:checked ~ .header-nav {
+    display: flex; 
+  }
 }
