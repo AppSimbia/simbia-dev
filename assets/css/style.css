@@ -1202,6 +1202,8 @@ section {
     align-items: center;
     justify-content: center;
   }
+
+  /* -- FOOTER-07 -- */
   .footer-top {
     gap:3vh
   }
@@ -1219,5 +1221,8 @@ section {
   .footer-logos {
     justify-content: center;
     gap: 1vh;
+  }
+  .footer-07 {
+    height: 100vh;
   }
 }
