@@ -270,7 +270,8 @@ section {
 .about-s1-content {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around
+  justify-content: space-around;
+  margin-top: 5vh;
 }
 #about-s1-paragraphs {
   display: flex;
@@ -571,6 +572,7 @@ section {
   align-items: center;
   flex-wrap: wrap;
   gap: 20px;
+  margin-top: 5vh;
 }
 .plan-box {
   background-color: #FFFFFF30;
