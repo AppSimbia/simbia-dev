@@ -1340,8 +1340,7 @@ section {
   }
   .menu .header-menu {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    
   }
 }
 
