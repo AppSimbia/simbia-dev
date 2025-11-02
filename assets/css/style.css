@@ -150,6 +150,8 @@ section {
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px 60px;
   position: fixed;
   top: 20px;
   z-index: 1;
@@ -171,6 +173,13 @@ section {
   -webkit-backdrop-filter: blur(5px);
   border: 1px solid rgba(255, 255, 255, 0.3);
   padding: 0.7rem;
+}
+
+#header-list{
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .header-nav li {
@@ -197,13 +206,16 @@ section {
   font-size: 1rem;
 }
 
+#check, .open-menu, .close-menu {
+  display: none;
+}
+
 /* logo simbia */
 #header-logo {
   display: flex;
   justify-content: center;
 }
 .header-more {
-  width: 8vw;
   min-width: 75px;
 }
 
@@ -613,7 +625,7 @@ section {
 
 
 /* -- SECTION TEAM-06 -- */
-.team-06 {
+.team-06{
   display: flex;
   flex-direction: column;
 }
@@ -656,6 +668,10 @@ section {
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+
+.team-06 .cards-redes-sociais a {
+  cursor: pointer;
 }
 
 .team-06 .card:hover .content{
@@ -717,6 +733,103 @@ section {
   justify-content: center;
   align-items: center;
 }
+
+.team-06 {
+  padding: 5vh 2vw;
+}
+.team-06 .card {
+  flex: 0 0 180px;
+  height: auto;
+  font-size: 11px;
+}
+/* carrossel horizontal */
+.team-06 {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding: 10vh 5vw;
+}
+
+.team-06 .slider {
+  overflow: hidden;
+  cursor: grab;
+}
+
+.team-06 .slider:active {
+  cursor: grabbing;
+}
+
+.team-06 .list {
+  display: flex;
+  gap: 30px;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.team-06 .list::-webkit-scrollbar {
+  display: none;
+}
+
+.team-06 .card {
+  flex: 0 0 250px;
+  height: 330px;
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: var(--paragraph-font);
+  font-size: 12px;
+  box-shadow: 0 4px 12px var(--color-black-opacity);
+  transition: transform 0.3s ease;
+}
+
+.team-06 .card:hover {
+  transform: scale(1.0);
+}
+
+.team-06 .light-card {
+  background-image: url(../images/cards/card-background-light.jpg);
+  color: #46694f;
+}
+
+.team-06 .dark-card {
+  background-image: url(../images/cards/card-background-dark.jpg);
+  color: var(--color-white-secundary);
+}
+
+.team-06 .content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.team-06 .content h3 {
+  font-family: var(--title-font);
+  font-size: 20px;
+}
+
+.team-06 .content h5 {
+  font-size: 11px;
+  opacity: 70%;
+}
+
+.team-06 .content p {
+  font-size: 13px;
+}
+
+#team-06 {
+  user-select: none; 
+  -webkit-user-drag: none; 
+}
+
+#team-06 img {
+  pointer-events: none; 
+}
+
+
 
 
 
@@ -1149,12 +1262,58 @@ section {
 
 
 
-
   /* -- PLANS-05 -- */
   /* -- TEAM-06 -- */
   /* -- FOOTER-07 -- */
 }
-@media (max-width: 700px){
 
+@media (max-width: 790px){
+  .header-nav {
+    display: none;
+    background-color: var(--color-green-opacity);
+  }
 
+  .menu{
+    display: block;
+  }
+  
+  #header-list{
+    display: block;
+  }
+
+  #check {
+    display: none;
+  }
+
+  .close-menu{
+    display: none;
+    cursor: pointer;
+    color: var(--color-white-opacity);
+  }
+
+  #header-logo{
+    display: none;
+  }
+
+  .open-menu {
+      display: block;
+      cursor: pointer;
+      color: var(--color-green-primary);
+  }
+  
+  #check:checked ~ .open-menu {
+    display: none; 
+  }
+
+  #check:checked ~ .header-nav .close-menu {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 1.5rem; 
+}
+
+  #check:checked ~ .header-nav {
+    display: flex; 
+  }
 }

@@ -16,18 +16,42 @@
     <!-- HEADER DO SITE -->
     <header>
         <div class="header" id="header">
-            <div class="header-logo header-more">
+            <div class="header-logo header-more" id="header-logo">
                 <img src="assets/images/logos/icon-simbia-escrito-claro.svg" alt="Logo Simbia" width="120">
             </div>
 
-            <ul class="header-nav">
-                <li><a href="#hero-01">Home</a></li>
-                <li><a href="#about-02s1">Como funciona</a></li>
-                <li><a href="#workflow-03">Fluxo</a></li>
-                <li><a href="#features-04">Funcionalidades</a></li>
-                <li><a href="#plans-05">Planos</a></li>
-                <li><a href="#team-06">Time</a></li>
-            </ul>
+            <!-- <div class="logo">
+                <img src="assets/images/logos/icon-simbia-simplista.svg" alt="">
+            </div> -->
+
+            <nav>
+                <input type="checkbox" name="" id="check"> 
+                <label for="check" class="open-menu">
+                    <i class="fa-solid fa-bars"></i>
+                </label>
+
+                    <div class="header-nav">
+                        <div class="menu">
+                            <div>
+                                <label for="check" class="close-menu">
+                                <i class="fas fa-times"></i>
+                                </label>
+                                
+                            </div>
+                        
+
+                            <ul id="header-list">
+                                <li><a href="#hero-01">Home</a></li>
+                                <li><a href="#about-02s1">Como funciona</a></li>
+                                <li><a href="#workflow-03">Fluxo</a></li>
+                                <li><a href="#features-04">Funcionalidades</a></li>
+                                <li><a href="#plans-05">Planos</a></li>
+                                <li><a href="#team-06">Time</a></li>
+                            </ul>
+                        </div>
+                    </div>
+            </nav>
+            
 
             <button id="btn-enter" class="btn-standard header-more">Entrar</button>
             
