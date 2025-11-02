@@ -38,7 +38,7 @@ h1 {
   font-size: 3rem;
 }
 h2 {
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
 h3 {
   font-size: 1.5rem;
@@ -50,7 +50,7 @@ h5 {
   font-size: 0.5em;
 }
 p {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
 }
 button {
   font-size: 1rem;
@@ -60,7 +60,7 @@ button {
 /* sections - tamanho */
 section {
   min-height: 100vh;
-  padding: 5vh 5vw;
+  padding: 5vh 4vw;
   position: relative;
 }
 
@@ -74,7 +74,7 @@ section {
   display: flex;
   justify-content: center;
   position: relative;
-  bottom: 8vh
+  bottom: 60px;
 }
 .target-box img {
   height: 50px
@@ -261,6 +261,9 @@ section {
 .about-s1-right img {
   max-height: 80vh;
 }
+.about-s1-right {
+  background: radial-gradient(circle 20vw at center, var(--color-green-primary), var(--color-white-primary));
+}
 
 
 
@@ -334,6 +337,7 @@ section {
 .about-02-chat-box .box {
   display: flex;
   gap: 10px;
+  align-items: center;
   padding: 1vh 1vw;
   width: 80%;
   border-radius: 20px;
@@ -381,7 +385,8 @@ section {
 }
 #workflow-box-left .title-with-logo img {
   position: relative;
-  top: 10px;
+  top: 13px;
+  width: 3.5em
 }
 #workflow-box-left h3 {
   font-family: var(--title-font);
@@ -542,10 +547,7 @@ section {
 
 
 /* -- SECTION TEAM-06 -- */
-.team-06 .cards {
-  display: flex;
-  gap: 20px;
-}
+
 .team-06 .card {
   width: 220px;
   height: 300px;
@@ -556,7 +558,9 @@ section {
   justify-content: space-between;
   font-family: var(--paragraph-font);
   font-size: 12px;
-  box-shadow: 0 4px 12px var(--color-black-opacity)
+  box-shadow: 0 4px 12px var(--color-black-opacity);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .team-06 .card h3 {
@@ -584,8 +588,59 @@ section {
   gap: 10px;
 }
 
-
-
+.team-06 .card:hover .content{
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+.team-06 #card-felipe:hover {
+  background-image: url(../images/cards/foto-felipe.jpeg);
+}
+.team-06 #card-fernanda:hover {
+  background-image: url(../images/cards/foto-fernanda.jpeg);
+}
+.team-06 #card-gabriela:hover {
+  background-image: url(../images/cards/foto-gabriela.jpeg);
+}
+.team-06 #card-guilherme:hover {
+  background-image: url(../images/cards/foto-agra.jpeg);
+}
+.team-06 #card-vinicius:hover {
+  background-image: url(../images/cards/foto-vinicius.jpeg);
+}
+.team-06 #card-rodrigo:hover {
+  background-image: url(../images/cards/foto-rodrigo.jpeg);
+}
+.team-06 #card-rahquel:hover {
+  background-image: url(../images/cards/foto-rahquel.jpeg);
+}
+.team-06 #card-yasmin:hover {
+  background-image: url(../images/cards/foto-yasmin.jpeg);
+}
+.team-06 #card-mel:hover {
+  background-image: url(../images/cards/foto-mel.jpeg);
+}
+.team-06 #card-valen:hover {
+  background-image: url(../images/cards/foto-valen.jpeg);
+}
+.team-06 #card-taxiotti:hover {
+  background-image: url(../images/cards/foto-taxiotti.jpeg);
+}
+.team-06 #card-makita:hover {
+  background-image: url(../images/cards/foto-makita.jpeg);
+}
+.team-06 #card-cury:hover {
+  background-image: url(../images/cards/foto-cury.jpeg);
+}
+.team-06 #card-lucas-gracas:hover {
+  background-image: url(../images/cards/foto-lucas-gracas.jpeg);
+}
+.team-06 #card-pg:hover {
+  background-image: url(../images/cards/foto-pg.jpeg);
+}
+.team-06 #card-pips:hover {
+  background-image: url(../images/cards/foto-pips.jpeg);
+}
 
 /* FOOTER-07 */
 .footer-07 {
@@ -683,9 +738,10 @@ section {
   grid-template-areas: 
   'nome sobrenome'
   'email email'
-  'mensagem mensagem';
+  'mensagem mensagem'
+  'enviar enviar';
   width: 90%;
-  gap: 2vw;
+  gap: 1vw;
   margin-bottom: 0;
 }
 .footer-07 #name {
@@ -700,6 +756,16 @@ section {
 .footer-07 #mensagem {
   grid-area: mensagem;
 }
+.footer-07 #btn-forms {
+  background: var(--color-black-primary);
+  color: var(--color-white-primary);
+}
+.footer-07 #botao {
+  grid-area: enviar;  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .footer-07 .contact-input-borders {
   border: 2px solid var(--color-black-primary);  
   padding: 4px;
@@ -710,9 +776,10 @@ section {
   width: 100%;
   height: 100%;
   border: none;
+  resize: none;
 }
 
-.footer-07 .contact-input:focus{
+.footer-07 .contact-input-borders:focus{
   outline: none;
 }
 
