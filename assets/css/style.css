@@ -844,13 +844,15 @@ section {
   display: flex;
   flex-direction: column;
   gap: 2vh;
+  flex: 1;
 }
 .footer-top {
   display: flex;
   flex-direction: column;
   align-items: center;
   flex-wrap: wrap;
-  gap: 2vw;
+  justify-content: space-around;
+  flex: 1;
 }
 .footer-infos {
   display: flex;
@@ -1144,9 +1146,6 @@ section {
   .footer-07 .contact-input {
     font-size: 14px;
   }
-    .footer-top {
-    gap:3vh
-  }
   .footer-infos {
   text-align: center;
   justify-content: center;
@@ -1204,9 +1203,6 @@ section {
   }
 
   /* -- FOOTER-07 -- */
-  .footer-top {
-    gap:3vh
-  }
   .footer-infos {
   text-align: center;
   justify-content: center;
@@ -1224,5 +1220,11 @@ section {
   }
   .footer-07 {
     height: 100vh;
+  }
+  .footer-title h2 {
+    font-size: 1.5rem;
+  }
+  .footer-top{
+    
   }
 }
