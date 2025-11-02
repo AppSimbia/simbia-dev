@@ -63,7 +63,6 @@ section {
   padding: 5vh 4vw;
   position: relative;
 }
-
 /* sections - fundos escuros */
 .hero-01, .workflow-03, .plans-05, .footer-07 {
   background-image: url(../images/backgrounds/background-blur.jpg);
@@ -74,10 +73,16 @@ section {
   display: flex;
   justify-content: center;
   position: relative;
-  bottom: 60px;
+  z-index: 1;
 }
 .target-box img {
   height: 50px
+}
+.target-box-bottom {
+  bottom: 25px;
+}
+.target-box-top {
+  top: 25px;
 }
 /* sections - subtítulos */
 .page-assignature {
@@ -155,7 +160,7 @@ section {
   flex-wrap: wrap;
   position: fixed;
   top: 20px;
-  z-index: 1;
+  z-index: 2;
   width: 100vw;
 }
 
@@ -303,6 +308,7 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  border-radius: 0px 0px 40px 40px;
 }
 .about-02-dual-box {
   display: flex;
@@ -557,6 +563,7 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 40px;
 }
 .plans {
   display: flex;
