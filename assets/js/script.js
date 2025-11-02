@@ -70,28 +70,42 @@ document.addEventListener('DOMContentLoaded', () => {
     checkVisibleSection();
   });
   
-  // SECTION WORKFLOW-03
-  let imgMockup = document.getElementById("img-mockup");
-  let btnStepOne = document.getElementById("step-one");
-  let btnStepTwo = document.getElementById("step-two");
-  let btnStepThree = document.getElementById("step-three");
-  
-  btnStepOne.addEventListener('click', changeMockupOne);
-  btnStepTwo.addEventListener('click', changeMockupTwo);
-  btnStepThree.addEventListener('click', changeMockupThree);
-  
-  function changeMockupOne() {
-      imgMockup.src = "assets/images/mockups/mockup-login.svg";
-  }
-  
-  function changeMockupTwo() {
-      imgMockup.src = "assets/images/mockups/mockup-home.svg";
-  }
-  
-  function changeMockupThree() {
-      imgMockup.src = "assets/images/mockups/mockup-match.svg";
-  }
-  
+// SECTION WORKFLOW-03
+let imgMockup = document.getElementById("img-mockup");
+let btnStepOne = document.querySelector("#step-one .btn-flow");
+let btnStepTwo = document.querySelector("#step-two .btn-flow");
+let btnStepThree = document.querySelector("#step-three .btn-flow");
+
+function resetShadows() {
+  btnStepOne.style.boxShadow = "none";
+  btnStepTwo.style.boxShadow = "none";
+  btnStepThree.style.boxShadow = "none";
+}
+
+function changeMockupOne() {
+  imgMockup.src = "assets/images/mockups/mockup-login.svg";
+  resetShadows();
+  btnStepOne.style.boxShadow = "0 0 30px rgba(255, 255, 255, 0.6)";
+  b;
+}
+
+function changeMockupTwo() {
+  imgMockup.src = "assets/images/mockups/mockup-home.svg";
+  resetShadows();
+  btnStepTwo.style.boxShadow = "0 0 30px rgba(255, 255, 255, 0.6)";
+}
+
+function changeMockupThree() {
+  imgMockup.src = "assets/images/mockups/mockup-match.svg";
+  resetShadows();
+  btnStepThree.style.boxShadow = "0 0 30px rgba(255, 255, 255, 0.6)";
+}
+
+btnStepOne.addEventListener('click', changeMockupOne);
+btnStepTwo.addEventListener('click', changeMockupTwo);
+btnStepThree.addEventListener('click', changeMockupThree);
+
+
   // SECTION TEAM-06 - Carrossel de Cards
   const slider = document.querySelector('.slider .list');
   

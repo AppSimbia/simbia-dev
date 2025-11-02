@@ -96,6 +96,7 @@ section {
 .title-with-logo {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 10px;
   font-family: var(--title-font);
 }
@@ -206,6 +207,32 @@ section {
   min-width: 75px;
 }
 
+/* transição suave da logo */
+.header-logo img {
+  transition: opacity 0.3s ease-in-out;
+  animation: logoFade 0.3s ease-in-out;
+}
+
+.header-logo img.transitioning {
+  opacity: 0;
+}
+
+/* ESTILO PARA LINK ATIVO NO HEADER */
+.header-nav li.active {
+  background-color: var(--color-white-opacity);
+  border: 1px solid var(--color-white-primary);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.header-nav li.active a {
+  color: var(--color-black-primary);
+}
+
+@keyframes logoFade {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
 
 
 /* -- SECTION HERO-01 -- */
@@ -264,8 +291,6 @@ section {
 .about-s1-right {
   background: radial-gradient(circle 20vw at center, var(--color-green-primary), var(--color-white-primary));
 }
-
-
 
 
 
@@ -397,7 +422,7 @@ section {
 #workflow-steps {
   display: flex;
   flex-direction: column;
-  gap: 8vh;
+  gap: 5vh;
 }
 .workflow-step {
   display: flex;
@@ -414,7 +439,7 @@ section {
   border: none;
   font-size: 24px;
   font-weight: bold;
-  background-color: #56A07770;
+  background-color: var(--color-green-opacity);
   color: #FFFFFF;
   cursor: pointer;
 }
@@ -424,66 +449,107 @@ section {
 }
 #workflow-mockups img {
   max-height: 70vh;
-  border-radius: 20px;
+  border-radius: 40px;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
 }
+
 
 
 
 /* -- SECTION FEATURES-04 -- */
-.features-04 .title-with-logo {
-  color: var(--color-black-primary);
-  display: flex;
-  gap: 10px;
-}
-.features-04 .title-with-logo img {
-  position: relative;
-  top: 4px;
-}
-.features-04 .words {
+.features-04 {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: var(--paragraph-font);
-  width: 100%;
+}
+/* swiper carrossel */
+#features-04-items {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 0;
+  position: relative;
 }
 
-.features-04 .word-list {
+.swiper-slide {
+  background-color: transparent;
+  border-radius: 20px;
+  height: auto;
   display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: space-between;
-  gap: 2vw
+  transition: transform 0.3s ease;
 }
 
-.features-04 .feature-word {
-  padding: 10px;
-  width: 15vw;
-  font-family: var(--paragraph-font);
-  text-align: center;
-  border-radius: 40px;
+.swiper-slide img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  object-fit: cover;
 }
 
-.features-04 .word-dark {
-  background-image: linear-gradient(to right, #1E3E4B, #598163);
-  color: #FFFFFF;
+/* Estilização das bolinhas de paginação */
+.swiper-pagination {
+  position: relative !important;
+  margin-top: 40px;
+  bottom: 0 !important;
 }
 
-.features-04 .word-light {
-  border: 3px solid;
+.swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: #21455E;
+  opacity: 0.3;
+  transition: all 0.3s ease;
 }
+
+.swiper-pagination-bullet-active {
+  background-color: #63B47C;
+  opacity: 1;
+  transform: scale(1.3);
+}
+
+.swiper-pagination-bullet:hover {
+  opacity: 0.6;
+  transform: scale(1.1);
+}
+
+
+.swiper-pagination-bullet-active-main {
+  background-color: #63B47C !important;
+  opacity: 1 !important;
+}
+
+.swiper-pagination-bullet-active-prev,
+.swiper-pagination-bullet-active-next {
+  background-color: #21455E;
+  opacity: 0.5;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  display: none !important;
+}
+
+.swiper-slide:hover {
+  transform: scale(1.02);
+}
+
+
 
 
 /* -- SECTION PLANS-05 -- */
 .plans-05 {
   display: flex;
-  flex-direction: column;
-  gap: 8vh;
+  justify-content: center;
+  align-items: center;
 }
-
 .plans {
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
+  gap: 20px;
 }
 .plan-box {
   background-color: #FFFFFF30;
@@ -498,9 +564,10 @@ section {
   font-family: var(--paragraph-font);
 
   padding: 5vh 4vw;
-  height: 60vh;
-  width: 25vw;
-
+  height: 60%;
+  width: 25%;
+  min-width: 340px;
+  min-height: 440px;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
@@ -512,8 +579,6 @@ section {
 .plan-box .plan-features {
   display: flex;
   flex-direction: column;
-  gap: 1vh;
-  max-width: 20vw;
 }
 
 .plan-box .plan-features li {
@@ -546,10 +611,15 @@ section {
 
 
 
-/* -- SECTION TEAM-06 -- */
 
+/* -- SECTION TEAM-06 -- */
+.team-06 {
+  display: flex;
+  flex-direction: column;
+}
 .team-06 .card {
   width: 220px;
+  min-width: 220px;
   height: 300px;
   padding: 15px;
   border-radius: 20px;
@@ -641,11 +711,19 @@ section {
 .team-06 #card-pips:hover {
   background-image: url(../images/cards/foto-pips.jpeg);
 }
+.slider {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
 
 /* FOOTER-07 */
 .footer-07 {
   display: flex;
-  flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
@@ -655,14 +733,14 @@ section {
   width: 80%;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 2vh;
 }
 .footer-top {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 30px;
   flex-wrap: wrap;
+  gap: 2vw;
 }
 .footer-infos {
   display: flex;
@@ -670,6 +748,7 @@ section {
   width: 100%;
   flex-wrap: wrap;
 }
+
 .footer-07 .infos-section {
   color: var(--color-white-primary);
 }
@@ -682,7 +761,6 @@ section {
 }
 .footer-links div{
   display: flex;
-  gap: 40px;
 }
 .footer-links a {
   color: var(--color-white-primary)
@@ -759,6 +837,7 @@ section {
 .footer-07 #btn-forms {
   background: var(--color-black-primary);
   color: var(--color-white-primary);
+  width: 30%;
 }
 .footer-07 #botao {
   grid-area: enviar;  
@@ -782,8 +861,164 @@ section {
 .footer-07 .contact-input-borders:focus{
   outline: none;
 }
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 
-/* -- SECTION TEAM-06 (com carrossel horizontal automático) -- */
+
+
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* RESPONSIVIDADE */
+@media (max-width: 1080px) {
+  /* GLOBAL */
+  input, textarea, button {
+    font-size: 16px;
+  }
+  section {
+    padding: 3vh 5vw;
+    max-height: fit-content;
+    min-height: 100vh;
+  }
+
+
+
+  
+  /* -- HEADER -- */
+
+
+
+
+  /* -- HERO-01 -- */
+    h1 {
+    font-size: 1.8rem;
+    line-height: 1.3em;
+  }
+  .paragraph {
+    width: 80vw;
+    text-align: center;
+    justify-self: center;
+  }
+
+
+
+
+  /* -- ABOUT-02 S1 -- */
+  .about-s1-left,
+  .about-s1-right {
+    width: 100%;
+    text-align: center;
+  }
+  .about-s1-right img {
+    max-width: 100%;
+    height: auto;
+  }
+
+
+
+
+  /* -- ABOUT-02 S2 -- */
+  .about-02s2 {
+    padding-top: 80px; 
+  }
+  .about-02-dual-box {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px; 
+  }
+    .about-02-dual-box div {
+    width: 90%;
+    padding: 20px;
+    font-size: 0.9rem;
+    text-align: center;
+    box-sizing: border-box;
+    position:static
+  }
+
+  .about-02-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    margin-top: 30px;
+  }
+
+  #about-02-chat-box-left {
+    width: 100%;
+    max-width: 400px;
+    padding: 0 10px;
+  }
+
+  .about-02-chat-box-right {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+  }
+
+  .about-02-chat-box {
+    width: 100%;
+    padding: 20px;
+    min-height: auto;
+    box-sizing: border-box;
+  }
+
+  .about-02-chat-box .box {
+    width: 100%;
+    gap: 10px;
+    font-size: 0.9rem;
+  }
+
+
+
+
+  /* -- WORKFLOW-03 -- */
+  #workflow-box-left {
+    flex-direction: column;
+    gap: 5vh;
+  }
+  .workflow-step div {
+    width: 100%;
+  }
+  #workflow-mockups img {
+    max-width: 100%;
+    height: auto;
+  }
+
+
+
+  /* -- FEATURES-04 -- */
+  #features-04-items {
+    padding: 30px 0;
+  }
+  .swiper-pagination {
+    margin-top: 30px;
+  }
+  /* -- PLANS-05 -- */
+    .plans {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .plan-box {
+    width: 90%;
+    height: auto;
+    padding: 20px;
+  }
+
+
+
+
+
+/* TEAM – 06 */
+.team-06 {
+  padding: 5vh 2vw;
+}
+.team-06 .card {
+  flex: 0 0 180px;
+  height: auto;
+  font-size: 11px;
+}
+/* carrossel horizontal */
 .team-06 {
   position: relative;
   overflow: hidden;
@@ -862,135 +1097,64 @@ section {
 }
 
 #team-06 {
-  user-select: none; /* impede selecionar texto */
-  -webkit-user-drag: none; /* impede arrastar imagens em WebKit */
+  user-select: none; 
+  -webkit-user-drag: none; 
 }
 
 #team-06 img {
-  pointer-events: none; /* impede arrastar imagens */
-}
-
-/* SECTION FEATURES-04 - Swiper Carousel */
-#features-04-items {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 60px 0;
-  position: relative;
-}
-
-.swiper-slide {
-  background-color: transparent;
-  border-radius: 20px;
-  height: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: transform 0.3s ease;
-}
-
-.swiper-slide img {
-  width: 100%;
-  height: auto;
-  border-radius: 20px;
-  object-fit: cover;
-}
-
-/* Estilização das bolinhas de paginação */
-.swiper-pagination {
-  position: relative !important;
-  margin-top: 40px;
-  bottom: 0 !important;
-}
-
-.swiper-pagination-bullet {
-  width: 12px;
-  height: 12px;
-  background-color: #21455E;
-  opacity: 0.3;
-  transition: all 0.3s ease;
-}
-
-.swiper-pagination-bullet-active {
-  background-color: #63B47C;
-  opacity: 1;
-  transform: scale(1.3);
-}
-
-.swiper-pagination-bullet:hover {
-  opacity: 0.6;
-  transform: scale(1.1);
+  pointer-events: none; 
 }
 
 
-.swiper-pagination-bullet-active-main {
-  background-color: #63B47C !important;
-  opacity: 1 !important;
+
+
+  /* FOOTER – 07*/
+  .footer-contact-box {
+    width: 95%;
+    padding: 15px;
+  }
+  .footer-forms {
+    grid-template-areas:
+      "nome"
+      "sobrenome"
+      "email"
+      "mensagem"
+      "enviar";
+    gap: 10px;
+  }
+  .footer-07 .contact-input {
+    font-size: 14px;
+  }
 }
 
-.swiper-pagination-bullet-active-prev,
-.swiper-pagination-bullet-active-next {
-  background-color: #21455E;
-  opacity: 0.5;
-}
 
-.swiper-button-next,
-.swiper-button-prev {
-  display: none !important;
-}
 
-.swiper-slide:hover {
-  transform: scale(1.02);
-}
 
-@media (max-width: 768px) {
+/* RESPONSIVIDADE TABLETS */
+@media (min-width: 481px) and (max-width: 768px) {
+  /* -- HEADER -- */
+  /* -- HERO-01 -- */
+  /* -- ABOUT-02 S1 -- */
+  /* -- ABOUT-02 S2 -- */
+  /* -- WORKFLOW-03 -- */
+  /* -- FEATURES-04 -- */
   #features-04-items {
     width: 95%;
     padding: 40px 0;
   }
-  
   .swiper-pagination-bullet {
     width: 10px;
     height: 10px;
   }
-}
 
-@media (max-width: 480px) {
-  #features-04-items {
-    padding: 30px 0;
-  }
-  
-  .swiper-pagination {
-    margin-top: 30px;
-  }
-}
 
-/* TRANSIÇÃO SUAVE DA LOGO */
-.header-logo img {
-  transition: opacity 0.3s ease-in-out;
-}
 
-.header-logo img.transitioning {
-  opacity: 0;
-}
 
-/* Opcional: Adicionar animação de fade */
-@keyframes logoFade {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
+  /* -- PLANS-05 -- */
+  /* -- TEAM-06 -- */
+  /* -- FOOTER-07 -- */
 }
+@media (max-width: 700px){
 
-.header-logo img {
-  animation: logoFade 0.3s ease-in-out;
-}
 
-/* ESTILO PARA LINK ATIVO NO HEADER */
-.header-nav li.active {
-  background-color: var(--color-white-opacity);
-  border: 1px solid var(--color-white-primary);
-  transition: background-color 0.3s ease, border-color 0.3s ease;
-}
-
-.header-nav li.active a {
-  color: var(--color-black-primary);
 }
