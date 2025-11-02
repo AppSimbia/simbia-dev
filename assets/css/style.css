@@ -1276,15 +1276,9 @@ section {
 }
 
 
-/* RESPONSIVIDADE CELULAR */
+
 @media (max-width: 768px){
-  /* GLOBAL */
-  .btn-standard {
-    height: 2vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+    @media (max-width: 790px){
   .header-nav {
     display: none;
     background-color: var(--color-green-opacity);
@@ -1335,15 +1329,8 @@ section {
   #check:checked ~ .header-nav {
     display: flex; 
   }
-  #header-menu-title {
-    width: 110px;
-  }
-  .menu .header-menu {
-    display: flex;
-    
-  }
 }
-
+}
 
 /* RESPONSIVIDADE TABLETS */
 @media (min-width: 481px) and (max-width: 768px) {
