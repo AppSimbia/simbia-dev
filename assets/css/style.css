@@ -189,7 +189,9 @@ section {
   justify-content: space-around;
   align-items: center;
 }
-
+#btn-enter {
+  text-decoration: none;
+}
 .header-nav li {
   padding: 0.5vh 1vw 0.5vh 1vw;
   list-style: none;
