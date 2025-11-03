@@ -1098,45 +1098,8 @@ section {
 
 /* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 
-/* RESPONSIVIDADE */
-@media (max-width: 480px){
-  .btn-standard {
-    height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-   /* FOOTER – 07*/
-  .footer-contact-box {
-    width: 95%;
-    padding: 15px;
-  }
-  .footer-forms {
-    grid-template-areas:
-      "nome"
-      "sobrenome"
-      "email"
-      "mensagem"
-      "enviar";
-    gap: 10px;
-  }
-  .footer-07 .contact-input {
-    font-size: 14px;
-  }
-  .footer-infos {
-  text-align: center;
-  justify-content: center;
-  flex-wrap: wrap
-  }
-  .footer-links li{
-    text-align: start;
-  }
-  .footer-logos img {
-    max-height: 40px;
-  }
-}
-@media (max-width: 1080px) {
-  /* GLOBAL */
+@media (max-width: 1024px) {
+    /* GLOBAL */
   input, textarea, button {
     font-size: 16px;
   }
@@ -1145,21 +1108,7 @@ section {
     max-height: fit-content;
     min-height: 100vh;
   }
-  /* GLOBAL */
-  .btn-standard {
-    height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-
-
-  
-  /* -- HEADER -- */
-
-
-
+ 
 
   /* -- HERO-01 -- */
     h1 {
@@ -1173,8 +1122,6 @@ section {
   }
 
 
-
-
   /* -- ABOUT-02 S1 -- */
   .about-s1-left,
   .about-s1-right {
@@ -1185,8 +1132,6 @@ section {
     max-width: 100%;
     height: auto;
   }
-
-
 
 
   /* -- ABOUT-02 S2 -- */
@@ -1243,8 +1188,6 @@ section {
   }
 
 
-
-
   /* -- WORKFLOW-03 -- */
   #workflow-box-left {
     flex-direction: column;
@@ -1259,7 +1202,6 @@ section {
   }
 
 
-
   /* -- FEATURES-04 -- */
   #features-04-items {
     padding: 30px 0;
@@ -1267,6 +1209,8 @@ section {
   .swiper-pagination {
     margin-top: 30px;
   }
+
+
   /* -- PLANS-05 -- */
     .plans {
     flex-direction: column;
@@ -1277,20 +1221,37 @@ section {
     height: auto;
     padding: 20px;
   }
+}
 
 
 
+@media (max-width: 768px) {
+    /* GLOBAL */
+   .btn-standard {
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-
-
-
-
+  /* FEATURES - 04 */
+    .features-04 #features-04-items {
+    width: 95%;
+    padding: 40px 0;
+  }
+  .features-04 .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+  }
 
 
   /* FOOTER – 07*/
+  .footer-07 {
+    height: 100vh;
+  }
   .footer-contact-box {
     width: 95%;
-    padding: 15px;
+    padding: 2vh 2vw;
   }
   .footer-forms {
     grid-template-areas:
@@ -1299,15 +1260,15 @@ section {
       "email"
       "mensagem"
       "enviar";
-    gap: 10px;
+    gap: 1vh
   }
   .footer-07 .contact-input {
     font-size: 14px;
   }
   .footer-infos {
-  text-align: center;
-  justify-content: center;
-  flex-wrap: wrap
+    text-align: center;
+    justify-content: center;
+    flex-wrap: wrap
   }
   .footer-links li{
     text-align: start;
@@ -1315,15 +1276,12 @@ section {
   .footer-logos img {
     max-height: 40px;
   }
-}
-
-
-
-@media (max-width: 768px){
   .footer-logos {
     justify-content: center;
-    gap: 4vw;
+    gap: 2vw;
   }
+
+  /* header responsivo */
   .header-nav {
     display: none;
     background-color: var(--color-green-opacity);
@@ -1374,34 +1332,4 @@ section {
   #check:checked ~ .header-nav {
     display: flex; 
   }
-}
-
-@media (min-width: 481px) and (max-width: 768px) {
-  /* GLOBAL */
-  .btn-standard {
-    height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  /* -- HEADER -- */
-  /* -- HERO-01 -- */
-  /* -- ABOUT-02 S1 -- */
-  /* -- ABOUT-02 S2 -- */
-  /* -- WORKFLOW-03 -- */
-  /* -- FEATURES-04 -- */
-  .features-04 #features-04-items {
-    width: 95%;
-    padding: 40px 0;
-  }
-  .features-04 .swiper-pagination-bullet {
-    width: 10px;
-    height: 10px;
-  }
-
-
-
-  /* -- PLANS-05 -- */
-  /* -- TEAM-06 -- */
-  /* -- FOOTER-07 -- */
 }
