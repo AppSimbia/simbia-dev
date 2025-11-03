@@ -1099,6 +1099,42 @@ section {
 /* ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 
 /* RESPONSIVIDADE */
+@media (max-width: 480px){
+  .btn-standard {
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+   /* FOOTER – 07*/
+  .footer-contact-box {
+    width: 95%;
+    padding: 15px;
+  }
+  .footer-forms {
+    grid-template-areas:
+      "nome"
+      "sobrenome"
+      "email"
+      "mensagem"
+      "enviar";
+    gap: 10px;
+  }
+  .footer-07 .contact-input {
+    font-size: 14px;
+  }
+  .footer-infos {
+  text-align: center;
+  justify-content: center;
+  flex-wrap: wrap
+  }
+  .footer-links li{
+    text-align: start;
+  }
+  .footer-logos img {
+    max-height: 40px;
+  }
+}
 @media (max-width: 1080px) {
   /* GLOBAL */
   input, textarea, button {
@@ -1111,7 +1147,7 @@ section {
   }
   /* GLOBAL */
   .btn-standard {
-    height: 2vh;
+    height: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1340,12 +1376,10 @@ section {
   }
 }
 
-
-/* RESPONSIVIDADE TABLETS */
 @media (min-width: 481px) and (max-width: 768px) {
   /* GLOBAL */
   .btn-standard {
-    height: 2vh;
+    height: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
