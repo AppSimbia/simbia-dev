@@ -1109,7 +1109,13 @@ section {
     max-height: fit-content;
     min-height: 100vh;
   }
-  
+  /* GLOBAL */
+  .btn-standard {
+    height: 2vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
 
 
@@ -1265,7 +1271,7 @@ section {
   .footer-infos {
   text-align: center;
   justify-content: center;
-  flex-wrap: nowrap;
+  flex-wrap: wrap
   }
   .footer-links li{
     text-align: start;
@@ -1278,7 +1284,10 @@ section {
 
 
 @media (max-width: 768px){
-    @media (max-width: 790px){
+  .footer-logos {
+    justify-content: center;
+    gap: 4vw;
+  }
   .header-nav {
     display: none;
     background-color: var(--color-green-opacity);
@@ -1330,7 +1339,7 @@ section {
     display: flex; 
   }
 }
-}
+
 
 /* RESPONSIVIDADE TABLETS */
 @media (min-width: 481px) and (max-width: 768px) {
