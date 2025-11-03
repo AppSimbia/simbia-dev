@@ -189,7 +189,7 @@ section {
   justify-content: space-around;
   align-items: center;
 }
-#btn-enter {
+#btn-enter a {
   text-decoration: none;
 }
 .header-nav li {
